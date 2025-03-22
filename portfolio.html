@@ -35,28 +35,23 @@
     </div>
 
     <script>
-
-            // Initialize Masonry
-            document.addEventListener("DOMContentLoaded", function () {
-                var grid = document.querySelector('.grid');
-                
-                
-                new Masonry(grid, {
+        document.addEventListener("DOMContentLoaded", function () {
+            var grid = document.querySelector('.grid');
+    
+            // Ensure images load before Masonry runs
+            imagesLoaded(grid, function () {
+                var msnry = new Masonry(grid, {
                     itemSelector: '.grid-item',
                     columnWidth: '.grid-item',
-                    percentPosition: true
+                    percentPosition: true,
                 });
-
-                $grid.append( $items )
-                 .masonry( 'appended', $items );
-                // just do layout on imagesLoaded
-                $grid.imagesLoaded( function() {
-                $grid.masonry('layout');
-                });
-
-                
+    
+                // Force Masonry layout after images are loaded
+                msnry.layout();
             });
+        });
     </script>
+    
 
 </body>
 </html>
