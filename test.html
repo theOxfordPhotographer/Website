@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masonry Portfolio with JavaScript</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    
+        
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1>Portfolio</h1>
+    <div class="grid">
+        <div class="grid-item"><img src="Images/Portfolio1.jpg" alt="Image"></div>
+        <div class="grid-item"><img src="Images/Portfolio2.jpg" alt="Image"></div>
+        <div class="grid-item"><img src="Images/Portfolio3.jpg" alt="Image"></div>
+        <div class="grid-item"><img src="Images/Portfolio4.jpg" alt="Image"></div>
+        <div class="grid-item"><img src="Images/Portfolio5.jpg" alt="Image"></div>
+        <div class="grid-item"><img src="Images/Portfolio6.jpg" alt="Image"></div>
+        <div class="grid-item"><img src="Images/Portfolio7.jpg" alt="Image"></div>
+    </div>
+
+    <script>
+        // Initialize Masonry
+        document.addEventListener("DOMContentLoaded", function () {
+            var grid = document.querySelector('.grid');
+            new Masonry(grid, {
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-item',
+                percentPosition: true
+            });
+        });
+    </script>
+
+</body>
+</html>

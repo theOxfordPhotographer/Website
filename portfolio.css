@@ -1,5 +1,5 @@
-/* Basic Reset */
-body, h1, nav, ul, li, img {
+   /* Basic Reset */
+   body, h1, nav, ul, li, img {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -40,46 +40,24 @@ body {
     border-radius: 5px;
 }
 
-/* Portfolio Heading */
-h1 {
-    margin-top: 20px;
-    font-size: 36px;
-    color: white;
+
+.grid {
+    max-width: 800px;
+    margin: auto;
 }
 
-/* Image Gallery Styling */
-#Masonry-grid {
+.grid-item {
+    width: 48%; /* Almost half of the container for two columns */
+    margin-bottom: 10px;
+    border-radius: 8px; /* Optional */
+    width: calc(50% - 10*2px); /* Adjust width to account for margin */
+    margin-right: 10px; /* Adds space between columns */
+    margin-left: 10px; /* Adds space between columns */
+}
+
+.grid img {
     width: 100%;
-    margin: 20px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-/* Individual Image Item Styling */
-.image-item {
-    width: 30%;  /* Adjust this width to control the number of columns */
-    margin-bottom: 20px;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.image-item img {
-    width: 100%;
-    height: auto;
     display: block;
-    border-radius: 10px;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .image-item {
-        width: 45%;  /* 2 items per row on medium screens */
-    }
-}
-
-@media (max-width: 767px) {
-    .image-item {
-        width: 100%; /* 1 item per row on small screens */
-    }
+    border-radius: 8px; /* Optional */
+    pointer-events: none;
 }
