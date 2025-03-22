@@ -4,3 +4,10 @@ body {
     color: white;
     text-align: center;
 }
+
+img {
+    max-width: 100%; /* Makes the image scale down */
+    height: auto;
+    pointer-events: none;
+    user-drag: none;
+  }
