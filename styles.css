@@ -6,8 +6,42 @@ body {
 }
 
 img {
-    max-width: 100%; /* Makes the image scale down */
+    max-width: 90%; /* Makes the image scale down */
     height: auto;
     pointer-events: none;
-    user-drag: none;
   }
+
+  /* Style the Navigation Bar */
+.navbar {
+    background-color: #333; /* Dark background */
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Style the Navigation List */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Style the Navigation Links */
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.navbar ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
