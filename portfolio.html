@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="portfolio.css">
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
         
 </head>
 <body>
@@ -34,19 +35,27 @@
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var grid = document.querySelector('.grid');
 
-            // Initialize Masonry AFTER all images are loaded
-            imagesLoaded(grid, function () {
+            // Initialize Masonry
+            document.addEventListener("DOMContentLoaded", function () {
+                var grid = document.querySelector('.grid');
+                
+                
                 new Masonry(grid, {
                     itemSelector: '.grid-item',
                     columnWidth: '.grid-item',
-                    percentPosition: true,
-                    gutter: 20
+                    percentPosition: true
                 });
+
+                $grid.append( $items )
+                 .masonry( 'appended', $items );
+                // just do layout on imagesLoaded
+                $grid.imagesLoaded( function() {
+                $grid.masonry('layout');
+                });
+
+                
             });
-        });
     </script>
 
 </body>
