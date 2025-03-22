@@ -1,0 +1,62 @@
+body { 
+    margin: 0;
+    background: #7CB9E8;
+    color: white;
+    text-align: center;
+}
+
+img {
+    pointer-events: none;
+  }
+
+  /* Style the Navigation List */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Style the Navigation Links */
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.navbar ul li a:hover {
+    background-color: #7CB9E8;
+    border-radius: 5px;
+}
+
+/* Basic styling for image gallery */
+.image-gallery {
+    display: block;
+    margin: 0 auto;
+}
+
+.image-item {
+    width: 33.33%;  /* This will make each item take up one-third of the container's width */
+    padding: 10px;   /* Optional: space around the items */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.image-item img {
+    width: 100%;  /* Ensures images fill the container's width */
+    height: auto;  /* Keeps image aspect ratio */
+    display: block;  /* Removes unwanted space below images */
+    border-radius: 10px;  /* Optional: adds rounded corners */
+}
+
+
+
+
+

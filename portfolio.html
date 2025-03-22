@@ -3,6 +3,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Oxford Photographer - Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <!-- Include Masonry.js from CDN -->
+    <script src="https://unpkg.com/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,7 +21,37 @@
 
     <h1>Portfolio</h1>
 
-    
+    <main>
+        <section class="image-gallery" id="masonry-grid">
+            <div class="image-item">
+                <img src="Images/Portfolio1.jpg" alt="Image 1">
+            </div>
+            <div class="image-item">
+                <img src="Images/Portfolio2.jpg" alt="Image 2">
+            </div>
+            <div class="image-item">
+                <img src="Images/Portfolio3.jpg" alt="Image 3">
+            </div>
+            <div class="image-item">
+                <img src="Images/Portfolio4.jpg" alt="Image 4">
+            </div>
+            <div class="image-item">
+                <img src="Images/Portfolio1.jpg" alt="Image 1">
+            </div>
+        </section>
+    </main>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Initialize Masonry
+            var grid = document.querySelector('#masonry-grid');
+            var masonry = new Masonry(grid, {
+                itemSelector: '.image-item',
+                columnWidth: '.image-item',  // This works, but consider using a fixed width
+                percentPosition: true,
+                gutter: 20
+            });
+        });
+    </script>
 </body>
 </html>
