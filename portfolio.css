@@ -54,3 +54,11 @@ body {
     border-radius: 8px; /* Optional */
     pointer-events: none;
 }
+
+@media (max-width: 600px) {
+    .grid-item {
+        width: 100%; /* Full width for a single-column layout */
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
